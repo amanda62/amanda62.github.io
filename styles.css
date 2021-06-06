@@ -1,0 +1,96 @@
+/* GRID */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 10px 10px;
+}
+
+/* .row2 {  grid-row: 2;} */
+
+/* GENERAL STYLES */
+header {
+  width: 100%;
+  display: block;
+  grid-column: 1/-1;
+}
+
+header > nav,
+header > img,
+header > h1 {
+  display: inline-block;
+}
+
+body > h1 {
+  margin: 30px;
+}
+
+/* PROJECT PAGE */
+.project {
+  grid-column: span 12;
+}
+
+.card {
+  background-color: rgb(219, 238, 229);
+}
+
+.form {
+  grid-column: span 12;
+}
+
+/* ABOUT ME PAGE */
+.about-description {
+  grid-column: 1/-1;
+}
+.about-item-title {
+  grid-column: 1 / span 1;
+}
+.about-item-content {
+  grid-column: 2 / -2;
+}
+
+.about > p {
+  grid-column: 2 / span 8;
+  grid-row: 2;
+}
+
+/* CONTACT PAGE */
+.contact > p {
+  grid-column: 1 / span 12;
+  grid-row: 1;
+}
+
+.contact form {
+  grid-row: 2;
+}
+
+input[type="text"]:focus:valid,
+input[type="email"]:focus:valid,
+input[type="tel"]:focus:valid,
+select:focus:valid,
+textarea:focus:valid {
+  background-color: rgb(247, 245, 255) !important;
+}
+
+input[type="text"]:focus:invalid,
+input[type="email"]:focus:invalid,
+input[type="tel"]:focus:invalid,
+select:focus:invalid,
+textarea:focus:invalid {
+  background-color: rgb(255, 230, 227) !important;
+}
+
+/* DESKTOP STYLES */
+@media only screen and (min-width: 576px) {
+  .project {
+    grid-column: span 4;
+  }
+
+  .form {
+    grid-column: span 6;
+  }
+
+  .about-description {
+    grid-column: span 6;
+  }
+}

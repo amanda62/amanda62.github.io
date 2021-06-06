@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Contact -->
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <link href="styles.css" rel="stylesheet" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">amanda62</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarTogglerDemo01"
+            aria-controls="navbarTogglerDemo01"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-end">
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  aria-current="page"
+                  href="home-projects.html"
+                  >Projects</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about-me.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  href="contact.html"
+                  tabindex="-1"
+                  aria-disabled="true"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <h1>Contact me</h1>
+    <div class="container mb-5 grid contact">
+      <p>
+        Hi! If you'd like to get in touch with me, you can fill out the form
+        below
+      </p>
+      <!-- <form>
+           
+               <div>
+                <label for='formEmail'>Email</label>
+                <input type='email' id='formEmail' placeholder='name@email.com' required pattern='^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$' oninput='formatPhone()'>
+             </div>
+               <div>
+                   <div>Do you like clicking radio buttons?</div>
+                  <input type='radio' id='yesRadio' checked>
+                  <label for='yesRadio'>Yes</label>
+                  <input type='radio' id='noRadio' checked>
+                  <label for='noRadio'>No</label>
+               </div>
+               <div>
+                  <input type='submit' value="Deliver message through into the ether">
+               </div>
+              </form> -->
+
+      <form
+        action="mailto:amanda62@ucla.edu"
+        method="POST"
+        enctype="multipart/form-data"
+        name="EmailForm"
+        class="form"
+      >
+        <div class="mb-3">
+          <label for="formMessage" class="form-label">Message</label>
+          <textarea
+            class="form-control"
+            name="formMessage"
+            id="formMessage"
+            placeholder="Howdy Amanda! I think your webpage is..."
+          ></textarea>
+        </div>
+
+        <div class="mb-3">
+          <label for="formEmail" class="form-label">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            name="formEmail"
+            id="formEmail"
+            placeholder="name@email.com"
+            required
+            pattern=".*@.*\..*"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="formName" class="form-label">Name</label>
+          <input
+            type="text"
+            class="form-control"
+            name="formName"
+            id="formName"
+            placeholder="First and Last Name"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="formPhone" class="form-label">Phone</label>
+          <input
+            class="form-control"
+            name="formPhone"
+            id="formPhone"
+            type="tel"
+            placeholder="(nnn) nnn-nnnn"
+            required
+            pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$"
+            oninput="formatPhone()"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="inputReason" class="form-label"
+            >Quick-select a topic?</label
+          >
+          <select class="form-select" name="inputReason" id="inputReason">
+            <option selected>Choose...</option>
+            <option>Job opportunity</option>
+            <option>Let's be friends!</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              name="gridCheck"
+              id="gridCheck"
+              type="checkbox"
+            />
+            <label class="form-check-label" for="gridCheck"> Urgent </label>
+          </div>
+        </div>
+
+        <div class="mb-3 w-100">
+          <button class="btn btn-primary btn-lg btn-block w-100" type="submit">
+            Send
+          </button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
